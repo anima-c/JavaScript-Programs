@@ -108,7 +108,9 @@
     }
 
     function render() {
-        ctx.fillStyle = bg();
+        ctx.fillStyle = backgroundColor;
+        // ctx.fillStyle = bg();
+        
         ctx.fillRect(0, 0, canvasEl.width, canvasEl.height);
 
         edges.forEach(function (e) {
@@ -119,7 +121,9 @@
                 return;
             }
 
-            ctx.strokeStyle = bg();
+            ctx.strokeStyle = edgeColor;
+            // ctx.strokeStyle = bg();
+
             ctx.lineWidth = (1.0 - l / threshold) * 2.5;
             ctx.globalAlpha = 1.0 - l / threshold;
             ctx.beginPath();
@@ -134,7 +138,9 @@
                 return;
             }
 
-            ctx.fillStyle = bg();
+            ctx.fillStyle = nodeColor;
+            // ctx.fillStyle = bg();
+
             ctx.beginPath();
             ctx.arc(e.x, e.y, e.radius, 0, 2 * Math.PI);
             ctx.fill();
