@@ -108,7 +108,7 @@
     }
 
     function render() {
-        ctx.fillStyle = backgroundColor;
+        ctx.fillStyle = bg();
         ctx.fillRect(0, 0, canvasEl.width, canvasEl.height);
 
         edges.forEach(function (e) {
