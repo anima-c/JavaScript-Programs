@@ -11,6 +11,10 @@
     var nodes = [];
     var edges = [];
 
+    function bg() {
+        return '#' + Math.floor(Math.random() * 0xffffff).toString(16);
+    }
+
     function constructNodes() {
         for (var i = 0; i < 100; i++) {
             var node = {
@@ -115,7 +119,7 @@
                 return;
             }
 
-            ctx.strokeStyle = edgeColor;
+            ctx.strokeStyle = bg();
             ctx.lineWidth = (1.0 - l / threshold) * 2.5;
             ctx.globalAlpha = 1.0 - l / threshold;
             ctx.beginPath();
@@ -130,7 +134,7 @@
                 return;
             }
 
-            ctx.fillStyle = nodeColor;
+            ctx.fillStyle = bg();
             ctx.beginPath();
             ctx.arc(e.x, e.y, e.radius, 0, 2 * Math.PI);
             ctx.fill();
