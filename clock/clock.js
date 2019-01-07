@@ -1,0 +1,13 @@
+const hourHand = document.querySelector('.hours-container');
+const minuteHand = document.querySelector('.minutes-container');
+const secondHand = document.querySelector('.seconds-container');
+const now = new Date();
+const hour = now.getHours();
+const minute = now.getMinutes();
+const second = now.getSeconds();
+const secondDegree = second * 6;
+const minuteDegree = minute * 6 + (second / 10);
+const hourDegree = (hour * 30) + (minute / 2);
+hourHand.style.transform = `rotateZ(${hourDegree}deg)`;
+minuteHand.style.transform = `rotateZ(${minuteDegree}deg)`;
+secondHand.style.transform = `rotateZ(${secondDegree}deg)`;
