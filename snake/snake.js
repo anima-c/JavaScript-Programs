@@ -38,5 +38,5 @@ document.onkeydown = function (evt) {
         draw(snake.pop(), 'black');
     }
 
-    setTimeout(arguments.callee, 150);
+    setTimeout(arguments.callee, 200);
 }();
