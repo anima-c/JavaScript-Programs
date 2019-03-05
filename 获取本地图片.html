@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <input type="file" onchange="upload(this)">
+        <img id="img" src="" alt="">
+        <script>
+            function upload(e) {
+                console.log("TCL: upload -> e", e.files);
+                let img = document.getElementById('img');
+                img.src = e.files[0];
+                console.log("TCL: upload -> img", img);
+            }
+        </script>
+    </body>
+
+</html>

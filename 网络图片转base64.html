@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        var imgurl = 'https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png';
+
+        var canvas = document.createElement('canvas');
+
+        // canvas.width = 200;
+
+        // canvas.height = 200;
+
+        var ctx = canvas.getContext('2d');
+
+        var img = new Image();
+
+        img.src = imgurl;
+
+        img.setAttribute('crossorigin', 'anonymous'); // 注意设置图片跨域应该在图片加载之前
+
+        img.onload = function () {
+
+            ctx.drawImage(img, 0, 0);
+
+            // document.body.appendChild(canvas);
+
+            var canvastourl = canvas.toDataURL();
+
+            console.log(canvastourl);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
